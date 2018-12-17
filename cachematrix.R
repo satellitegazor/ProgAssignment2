@@ -29,9 +29,11 @@ makeCacheMatrix <- function(x = matrix()) {
   getInverse <- function() m
   
   ## list to maintain all the setter and getter methods for both original and inverse matrix
-  list(set = set, get = get,
-       setInverse = setInverse,
-       getInverse = getInverse)
+  list(	set = set, 					##setter method for original matrix
+		get = get,					##getter method for orignal matrix
+		setInverse = setInverse,	## setter method for inverse of original matrix
+		getInverse = getInverse		## getter method for inverse of original matrix
+	)
 }
 
 ## cacheSolve returns the cached Inverse of the given matrix if exists. 
